@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservations de Chambres</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <section>
+            <div class="logo">
+                <h3>ONOMO <span id="nuit_color">BEACH </span> </h3>
+            </div>
+        </section>
+
+        <menu>
+            <nav>
+                <ul>
+                    <li><a href="./commande.html">COMMANDES</a></li>
+                    <li><a href="./Accueil.html">ACCEUIL</a></li>
+                </ul>
+            </nav>
+        </menu>
+
+        <section class="auth">
+            <button class="signup"><a href="./inscripton.html">Inscription</a></button>
+            <button class="login"><a href="./connexion.html">Connexion</a></button>
+        </section>
+    </header>
+
+    <div class="container">
+        <div class="content-container">
+            
+
+            <form action="http://localhost:5000/reservation/submit" method="post">
+                <h2>Réservations de Chambres</h2>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>                
+                
+                <label for="typeChambre">Choisissez le type de chambre :</label>
+                <select id="typeChambre" name="typeChambre" required>
+                    <option value="S">Chambre Standard</option>
+                    <option value="L">Chambre Deluxe</option>
+                </select>
+            
+                <label for="date_arrivee">Date d'arrivée :</label>
+                <input type="date" id="date_arrivee" name="dateArrivee" required>
+            
+                <label for="date_depart">Date de départ :</label>
+                <input type="date" id="date_depart" name="dateDepart" required>
+            
+                <button type="submit">Envoyer la Réservation</button>
+            </form>
+        </div>
+    </div>
+    <script src="../javascript/reservation.js"></script>
+</body>
+</html>

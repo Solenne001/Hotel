@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commandes</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <section>
+            <div class="logo">
+                <h3>ONOMO <span id="nuit_color">BEACH </span> </h3>
+            </div>
+            
+        </section>
+
+        <menu>
+            <nav>
+                <ul>
+                    <li><a href="./reservation.html">RESERVATION</a></li>
+                    <li><a href="./Accueil.html">ACCEUIL</a></li>
+                </ul>
+            </nav>
+        </menu>
+
+        <section class="auth">
+            <button class="signup"><a href="./inscripton.html">Inscription</a></button>
+            <button class="login"><a href="./connexion.html">Connexion</a></button>
+
+        </section>
+    </header>
+
+    <div class="container">
+        <div class="content-container">
+            
+
+            
+            <form action="http://localhost:5000/commande/submit" method="post">
+                <h2>Commandes</h2>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required> 
+                
+                <label for="plat">Choisissez votre plat :</label>
+                <select id="plat" name="plat" required>
+                    <option value=""></option>
+                    <option value="Boeuf Mijoté">Boeuf Mijoté</option>
+                    <option value="Sauce au Vin Rouge et aux Champignons">Sauce au Vin Rouge et aux Champignons</option>
+                    <option value="Avocat a la prune">Avocat a la prune</option>
+                    <option value="Omelette radieux">Omelette radieux</option>
+                    <option value="Saumon avocado">Saumon avocado</option>
+                    <option value="Mixture de pate">Mixture de pate</option>
+                    <option value="Spaghetti au Vinaigre et a la courgette">Spaghetti au Vinaigre et a la courgette</option>
+                    <option value="Spaghetti Bolognaise">Spaghetti Bolognaise</option>
+                    
+                </select>
+
+                <label for="date">Date de commande :</label>
+                <input type="datetime-local" id="date" name="date" required>
+
+                <button type="submit">Envoyer la Commande</button>
+            </form>
+        </div>
+    </div>
+    <script src="../javascript/commande.js"></script>
+</body>
+</html>
